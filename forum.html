@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset='utf-8'>
+   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+   <title>FÓRUM</title>
+   <meta name='viewport' content='width=device-width, initial-scale=1'>
+   <link rel='stylesheet' type='text/css' media='screen' href='/landing page/_css/forum.css'>
+   
+</head>
+
+<body>
+   <header>
+      <a href="landing2.html"><img id="logo" src="/landing page/_image/gremio_colorado.jpg"></a>
+      <a href="landing2.html"><button class="buto1" type="submit">HOME</button></a>
+      <a href="eventos.html"><button class="buto1" type="submit">EVENTOS</button></a>
+      <a href="galeria.html"><button class="buto1" type="submit">GALERIA</button></a>
+      <a href="forum.html"><button class="buto2" type="submit">FÓRUM</button></a>
+      <a href="login.html"><img id="login" src="/landing page/_image/login.png"></a>
+  </header>
+   <br><br>
+   <h1>ACOMPANHE ALGUNS COMENTÁRIOS DOS NOSSOS INTEGRANTES</h1>
+   <h3>Faça parte do nosso fórum! Deixe elogios, críticas e sujestões no espaço abaixo.</h3>
+   <h1 id="espaco"></h1>
+   <div>
+      <form onsubmit="return comentarios()">
+         
+         <input id="texto" value="Escreva suas opiniões no espaço:"></input>
+         <input class="botoes" type="button" value="Enviar" onclick="comentarios()">
+         
+         
+      </form>
+      <p id="comentarios"></p>
+   </div>
+   <footer>
+      <h3>TODOS OS DIREITOS RESERVADOS -  DEV_Technology 2024</h3>
+   </footer>
+   <script>
+      function comentarios(){
+         var texto = document.getElementById('texto').value;
+        
+         document.getElementById('comentarios').innerHTML=texto;
+      }
+      
+   </script>
+</body>
+
+</html>

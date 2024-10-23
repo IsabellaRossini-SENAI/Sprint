@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset='utf-8'>
+   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+   <title>LOGIN</title>
+   <meta name='viewport' content='width=device-width, initial-scale=1'>
+   <link rel='stylesheet' type='text/css' media='screen' href='/landing page/_css/login.css'>
+   
+</head>
+
+<body>
+   <header>
+      <a href="landing2.html"><img id="logo" src="/landing page/_image/gremio_colorado.jpg"></a>
+      <a href="landing2.html"><button class="buto1" type="submit">HOME</button></a>
+      <a href="eventos.html"><button class="buto1" type="submit">EVENTOS</button></a>
+      <a href="galeria.html"><button class="buto1" type="submit">GALERIA</button></a>
+      <a href="forum.html"><button class="buto2" type="submit">FÓRUM</button></a>
+      <a href="login.html"><img id="login" src="/landing page/_image/login.png"></a>
+  </header>
+   <div>
+      <br><br>
+      <form action="confirmacao.html" onsubmit=" return confirmacao()">
+         <label for="texto">NOME: </label><br>
+         <input type="text" name="texto" class="dados" required />
+         <p></p>
+         <label for="telefone">TELEFONE: </label><br>
+         <input type="text" name="telefone" class="dados" required />
+         <p></p>
+         <label for="email">E-MAIL: </label><br>
+         <input type="email" name="email" class="dados" required />
+         <p></p>
+         <label for="senha">SENHA: </label><br>
+         <input type="password" name="senha" class="dados" required />
+         <p></p>
+         <input id="botao1" type="submit" value="Enviar">
+         <input id="botao2" type="reset" value="Apagar">
+      </form>
+      
+   </div>
+   <footer>
+      <h3>TODOS OS DIREITOS RESERVADOS -  DEV_Technology 2024</h3>
+   </footer>
+   <script>
+      function confirmacao(){
+         var nomeRegex= /^(?:[\p{Lu}&&[\p{IsLatin}]])(?:(?:')?(?:[\p{Ll}&&[\p{IsLatin}]]))+(?:\-(?:[\p{Lu}&&[\p{IsLatin}]])(?:(?:')?(?:[\p{Ll}&&[\p{IsLatin}]]))+)*(?: (?:(?:e|y|de(?:(?: la| las| lo| los))?|do|dos|da|das|del|van|von|bin|le) )?(?:(?:(?:d'|D'|O'|Mc|Mac|al\-))?(?:[\p{Lu}&&[\p{IsLatin}]])(?:(?:')?(?:[\p{Ll}&&[\p{IsLatin}]]))+|(?:[\p{Lu}&&[\p{IsLatin}]])(?:(?:')?(?:[\p{Ll}&&[\p{IsLatin}]]))+(?:\-(?:[\p{Lu}&&[\p{IsLatin}]])(?:(?:')?(?:[\p{Ll}&&[\p{IsLatin}]]))+)*))+(?: (?:Jr\.|II|III|IV))?$/;
+         var telRegex = /^[0-9]{2}\s[0-9]{9})/;
+         var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+         
+         var nome = document.getElementsByName('texto').value;
+         var tel = document.getElementsByName('telefone').value;
+         var email = document.getElementsByName('email').value;
+
+         if(!nomeRegex.test(nome)){
+            alert("Nome inválido.")
+            return false;
+         }
+         if(!telRegex.test(tel)){
+            alert("Telefone inválido.")
+            return false;
+         }
+         if(!emailRegex.test(email)){
+            alert("E-mail inválido.")
+            return false;
+         }
+         return true; 
+      }
+   </script>
+</body>
+
+</html>
