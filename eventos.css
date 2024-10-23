@@ -1,0 +1,136 @@
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "eventos eventos eventos"
+    "todos todos todos"
+    "footer footer footer";
+    grid-template-columns: 6vw 88vw 6vw;
+    grid-template-rows: 4vw;
+    background-color: rgb(213, 211, 202)
+}
+h1{
+    font-size: 24px;
+}
+h2{
+    font-size: 20px;
+}
+h3{
+    font-size: 16px;
+}
+/*--------------------------------------------------MENU--------------------------------------------------*/
+header{
+    grid-area: header;
+    background-color: rgba(229, 51, 42, 1);
+    display: flex;
+    align-items: center;
+}
+#logo{
+    width: 3vw;
+    margin-left: 1.7vw;
+    margin-right: 26.5vw;
+    cursor: pointer;
+    transition: all 0.1s;
+    border-radius: 50%;
+}
+#login{
+    width: 3vw;
+    cursor: pointer;
+    transition: all 0.1s;
+    
+}
+.buto1{
+    margin: 1vw;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.1s;
+    width: 7vw;
+    height: 8.5vh;
+    color: rgb(255,255,255);
+}
+.buto2{
+    margin: 1vw;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.1s;
+    width: 7vw;
+    height: 8.5vh;
+    margin-right: 30vw;
+    color: rgb(255,255,255)
+}
+.buto1:hover{
+    background-color: rgb(131, 16, 10);
+
+}
+.buto2:hover{
+    background-color: rgb(131, 16, 10);
+}
+
+.content { 
+    display: grid; 
+    gap: 20px;
+} 
+.eventos {
+    grid-area: eventos;
+    border: 15px solid white;
+    width: 20%;
+    height: 20%;
+    box-shadow: 3px 3px red;
+    position: relative;
+    transition: linear 0.25s;
+}
+.rotate1{
+    transform: rotate(5deg);
+}
+.rotate2{
+    transform: rotate(-5deg);
+}
+.todos:hover{
+    transform: rotate(0deg) scale(1.1);
+}
+.todos {
+    grid-area:todos;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    transition: linear 0.2s;
+}
+
+.todos img {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-left: 5%;
+    margin-top: 2%;
+    width: 75%;
+    align-items: center;
+}
+
+.nome{
+    margin-top: 1%;
+    margin-left: 15%;
+    font-size: 150%;
+    display: inline-block;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align:center;
+    width: 45%;
+}
+
+
+/*--------------------------------------------------FOOTER--------------------------------------------------*/
+footer{
+    grid-area: footer;
+    background-color: rgba(229, 51, 42, 1);
+    color: rgb(255,255,255);
+    text-align: center;
+    height: 5vh;
+}

@@ -1,0 +1,265 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "imagem imagem imagem"
+    "impacto impacto impacto"
+    "clique clique clique"
+    "calendario calendario b"
+  
+    "p p p"
+    "footer footer footer"
+  ;
+  grid-template-columns: 6vw 86.7vw 6vw;
+  grid-template-rows: 4vw;
+  background-color: rgb(213, 211, 202)
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+/*--------------------------------------------------MENU--------------------------------------------------*/
+header {
+  grid-area: header;
+  background-color: rgba(229, 51, 42, 1);
+  display: flex;
+  align-items: center;
+}
+
+#logo {
+  width: 3vw;
+  margin-left: 1.7vw;
+  margin-right: 26.5vw;
+  cursor: pointer;
+  transition: all 0.1s;
+  border-radius: 50%;
+}
+
+#login {
+  width: 3vw;
+  cursor: pointer;
+  transition: all 0.1s;
+
+}
+
+.buto1 {
+  margin: 1vw;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.1s;
+  width: 7vw;
+  height: 8.5vh;
+  color: rgb(255, 255, 255);
+}
+
+.buto2 {
+  margin: 1vw;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.1s;
+  width: 7vw;
+  height: 8.5vh;
+  margin-right: 29vw;
+  color: rgb(255, 255, 255)
+}
+
+.buto1:hover {
+  background-color: rgb(131, 16, 10);
+
+}
+
+.buto2:hover {
+  background-color: rgb(131, 16, 10);
+}
+
+/*--------------------------------------------------MEIO--------------------------------------------------------*/
+
+#imagem {
+  grid-area: imagem;
+  margin: auto;
+  margin-top: 8vh;
+}
+
+#socorro {
+  width: 50vw;
+  height: 60vh;
+}
+
+#impacto {
+  grid-area: impacto;
+  text-align: center;
+  margin-top: 8vh;
+}
+
+#clique {
+  grid-area: clique;
+  background-color: rgba(229, 51, 42, 1);
+  color: rgb(255, 255, 255);
+  width: 50%;
+  height: 8vh;
+  margin-left: 21.5vw;
+  border-radius: 10px;
+  border: none;
+  margin-top: 7vh;
+}
+
+#clique:hover {
+  background-color: rgb(131, 16, 10);
+}
+
+/*--------------------------------------------------CALENDÁRIO--------------------------------------------------*/
+:root {
+  --teal-050: #effcf6;
+  --teal-100: rgba(229, 51, 42, 1);
+  --teal-200: #ed948e;
+
+  --teal-900: rgb(255, 255, 255);
+
+  --blue-grey-050: #f0f4f8;
+  --blue-grey-100: #d9e2ec;
+  --blue-grey-200: #bcccdc;
+  --blue-grey-300: #9fb3c8;
+  --blue-grey-400: #829ab1;
+  --blue-grey-500: #627d98;
+  --blue-grey-600: #486581;
+  --blue-grey-700: #334e68;
+  --blue-grey-800: #243b53;
+  --blue-grey-900: #102a43;
+}
+
+html {
+
+  line-height: 1.4;
+  font-weight: 400;
+
+}
+
+.calendar {
+  grid-area: calendario;
+  width: 18vw;
+  margin-left: 5vw;
+  padding: 1.5em;
+  background-color: #fff;
+  border: 2px solid var(--blue-grey-200);
+  margin-top: 7vh;
+  border-radius: 8px;
+
+}
+
+/* For the month*/
+.month-indicator {
+  color: var(--blue-grey-700);
+  text-align: center;
+  font-weight: 500;
+}
+
+/* CSS grid used for the dates*/
+.day-of-week,
+.date-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+/* Styles for the weekday/weekend header*/
+.day-of-week {
+  margin-top: 1.25em;
+}
+
+.day-of-week>* {
+  font-size: 0.7em;
+  color: var(--blue-grey-400);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  font-variant: small-caps;
+  text-align: center;
+}
+
+/* Dates */
+.date-grid {
+  margin-top: 0.5em;
+}
+
+/* Positioning the first day */
+.date-grid button:first-child {
+  grid-column: 6;
+}
+
+/* Style for each day*/
+.date-grid button {
+  position: relative;
+  border: 0;
+  width: 4.5ch;
+  height: 4.5ch;
+  border-radius: 50%;
+  background-color: transparent;
+  color: var(--blue-grey-600);
+}
+
+.date-grid button:hover,
+.date-grid button:focus {
+  outline: none;
+  background-color: var(--blue-grey-050);
+  color: var(--blue-grey-700);
+}
+
+.date-grid button:active,
+.date-grid button.is-selected {
+  background-color: var(--teal-100);
+  color: var(--teal-900);
+}
+
+p{
+  width: 90vw;
+ margin-left: 5vw;
+  margin-top: 10vh;
+  border: solid black 2px;
+  background-color: rgba(229, 51, 42, 0.785); 
+  color: white;
+  margin-bottom: 10vh;
+}
+
+b{
+  margin-left: 35vw;
+  margin-top: 31vh;
+  display: flex;
+  width: 40vw;
+  height: 5vh;
+  font-size: 24px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+}
+
+/*--------------------------------------------------IMAGEM INICIAL--------------------------------------------------*/
+
+/*--------------------------------------------------FOOTER--------------------------------------------------*/
+footer {
+  grid-area: footer;
+  background-color: rgba(229, 51, 42, 1);
+  color: rgb(255, 255, 255);
+  font-weight: normal;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
